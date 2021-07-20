@@ -27,17 +27,13 @@ int main(void){
 		if(!(PINB & 1<<PINB0)){
 			if(pressed == 0){
 				pressed = 1;
-				
-				while(!(UCSR0A & (1<<UDRE0)))
-					;
 				UDR0 = 0b10100001;
 				
 			}
 		}
 		else{
 			pressed = 0;
-			
-		}
+			}
 		}
 		
 	
